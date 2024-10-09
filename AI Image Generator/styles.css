@@ -1,0 +1,215 @@
+/* Importovanje Google fonta - Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.main {
+  background: url(images/florian.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;    
+}
+
+.main::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;    
+  background: #000000;
+  opacity: 0.4;
+}
+
+.main .main-elements {
+  color: #fff;
+  padding: 0 15px;
+  max-width: 1100px;
+  text-align: center;
+  position: relative;
+}
+
+.main h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.main p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.main .form {
+  height: 50px;
+  width: 90%;
+  padding: 6px;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 0px;
+}
+
+.form .input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 17px;
+}
+
+.form .form-elements {
+  height: 100%;
+  display: flex;
+  gap: 10px;  
+}
+
+.form .drop-down {    
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+}
+
+.form .button {
+  padding: 0 30px; 
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 0px;
+  font-weight: 550;
+  color: #fff;
+  cursor: pointer;    
+  text-transform: uppercase;
+  background: #e96b17;    
+}
+
+.form .button[disabled] {
+  pointer-events: none;
+  opacity: 0.6;
+}
+  
+.form button:hover {
+  background: #cf5d11;
+}
+
+.results {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  max-width: 100%;
+  margin: 35px auto;
+  justify-content: center;
+}
+
+.results .img-card {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  background: #f2f2f2;
+}
+
+.results .img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.results .img-card.loading img {
+  width: 50px;
+  height: 50px;
+}
+
+.results .img-card .download-button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #fff;
+  height: 33px;
+  width: 33px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.results .img-card:not(.loading):hover .download-button {
+  display: flex;
+}
+
+.results .img-card .download-button img {
+  width: 15px;
+  height: 15px;
+}
+ 
+@media screen and (max-width: 760px) {
+  .main h1 {
+    font-size: 1.8rem;
+  }
+
+  .main p {
+    font-size: 1rem;
+  }
+
+  .main .form {
+    margin-top: 30px;
+    height: 50px;
+    display: block;
+  }
+
+  .form .form-elements {
+    height:  40px;
+    margin-top:  15px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .form  .drop-down {
+    color: #fff;
+  }
+
+  .form .drop-down option {
+    color: #000;
+  }
+
+  .form .button {
+    height: 100%;
+  }
+
+  .results .img-card:not(.loading) .download-button {
+    display: flex;
+  }
+
+  .results {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main {
+    height: 55vh;
+  }
+
+  .results .img-card {
+    width: 100%;
+  }
+}
